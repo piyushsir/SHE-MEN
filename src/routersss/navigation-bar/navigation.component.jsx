@@ -4,6 +4,8 @@ import { Fragment,useContext } from 'react';
 import {ReactComponent as Crownlogo} from '../../assets/crown.svg'
 import { UserContext } from '../../contexts/context.user';
 import { SignOutUser } from '../../utils/firebase/firebase.utils';
+import CartIcon from '../../components/cart-icon/cart-icon.component';
+import IconDrop from '../../components/icon-dropdown/icon-dropdown.component';
 const Navbar=()=>
 {
 
@@ -35,10 +37,14 @@ const Navbar=()=>
         {
           CurrentUser?(<span className='nav-link' onClick={SignOutHandler}> Sign-Out</span>):(<Link to="/sign-in" className='nav-link'> Sign-In </Link>)
         }
+
+        <CartIcon/>
+      
         
        
         
      </div>
+     <IconDrop/>
      </div>
       <Outlet/>
     </Fragment>
