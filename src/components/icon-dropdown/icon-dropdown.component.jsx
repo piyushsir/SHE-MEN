@@ -2,17 +2,18 @@ import './icon-dropdown.style.scss'
 import Button from '../../button/button.component';
 import CardItem from '../card-item/card-item.component';
 import { CartContext } from '../../contexts/cart.context';
-import { useContext } from 'react';
-
+import { useContext} from 'react';
+import { useNavigate } from 'react-router-dom';
+//instead of link we can also use {useNavigate} hook 
 const IconDrop=()=>
 {
+
    const {CartProducts} =useContext(CartContext)
-   const {setProductCount} = useContext(CartContext)
-   const tot = CartProducts.reduce((total,itms)=>
-   {
-        return (total+itms.quantity);
-   },0)
-   setProductCount(tot);
+  const Navigate = useNavigate();
+  const Gotocheck=()=>
+  {
+   return Navigate("/checklist")
+  }
    return (
    <div className='cart-dropdown-container'>
       <div className='cart-items'>
@@ -25,7 +26,7 @@ const IconDrop=()=>
       </div>
    
 
-       <Button type="button">CHECKLIST</Button>
+      <Button type="button" onClick={Gotocheck}>CHECKLIST</Button>
    </div>
 
    )
