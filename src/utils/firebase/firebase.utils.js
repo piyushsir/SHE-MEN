@@ -1,5 +1,5 @@
 import {initializeApp} from 'firebase/app'
-import {getFirestore,getDoc,setDoc,doc} from 'firebase/firestore'
+import {getFirestore,getDoc,setDoc,doc,collection,writeBatch,query, getDocs} from 'firebase/firestore'
 import {getAuth,signInWithPopup,signInWithRedirect,GoogleAuthProvider,
     createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut
 } from 'firebase/auth'
@@ -26,6 +26,33 @@ const firebaseConfig = {
 
   export const db = getFirestore();
 
+  export const AddCollectionAndDocument=async(collectionKey,objectsToAdd)=>
+  {
+     const collectionRef = collection(db,collectionKey)
+     const batch = writeBatch(db)
+
+     objectsToAdd.forEach((object) => {
+        const docRef = doc(collectionRef,object.title.toLowerCase())
+        batch.set(docRef,object)
+     });
+     await batch.commit();
+     console.log("done");
+  } 
+  export const getCollectionAndDocument=async()=>
+  {
+    const collectionRef = collection(db,'categories')
+    const q = query(collectionRef)
+    const querySnapShot = await getDocs(q);
+    return querySnapShot.docs.reduce((acc,docSnapShot)=>
+    {
+      const {title,items} = docSnapShot.data();
+      acc[title.toLowerCase()]=items; 
+      return acc;
+
+
+    },{})
+
+   }
   export const CreateUserFromAuth=async(userinfo,additionalinfo={})=>
   {
       const database = doc(db,'users',userinfo.uid);

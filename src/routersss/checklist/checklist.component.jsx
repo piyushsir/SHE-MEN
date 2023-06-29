@@ -37,7 +37,7 @@ return(
         )
 
       })}
-      <span className='Total'><h2>               Total=${TotalCost}</h2></span>
+      <span className='Total'><h2>Total=${TotalCost}</h2></span>
 </div>
 
 )

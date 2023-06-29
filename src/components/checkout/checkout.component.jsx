@@ -13,7 +13,7 @@ const CheckOut =({Products})=>
         </div>
             <span className='name'>{name}</span>
             <span className='quantity'>
-            <span class="material-symbols-outlined" onClick={()=>ReduceProductToCart(Products)}>arrow_back_ios</span>{quantity}
+            <span className="material-symbols-outlined" onClick={()=>ReduceProductToCart(Products)}>arrow_back_ios</span>{quantity}
             <span className="material-symbols-outlined" onClick={()=>addProductToCart(Products)}>arrow_forward_ios</span>
             
             </span> 
