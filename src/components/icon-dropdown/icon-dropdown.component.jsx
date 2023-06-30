@@ -17,12 +17,12 @@ const IconDrop=()=>
    return (
    <div className='cart-dropdown-container'>
       <div className='cart-items'>
-       {CartProducts.map((items)=>
+       {CartProducts.length? (CartProducts.map((items)=>
        {
             return ( 
                <CardItem key = {items.id} Product={items}/>
             )
-       })}
+       })):<span className='empty-message'>EMPTY CART</span>}
       </div>
    
 
