@@ -73,7 +73,7 @@ const SignInForm=()=>
         }
         catch(error)
         {
-            if(error.code=="auth/popup-closed-by-user")
+            if(error.code==="auth/popup-closed-by-user")
             {
                 console.log(error);
             }

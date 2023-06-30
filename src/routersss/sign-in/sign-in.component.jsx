@@ -1,6 +1,6 @@
 
 //import {getRedirectResult} from 'firebase/auth'
-import {signInWithGooglePopup,CreateUserFromAuth,signInWithGoogleRedirect} from '../../utils/firebase/firebase.utils';
+//import {signInWithGooglePopup,CreateUserFromAuth,signInWithGoogleRedirect} from '../../utils/firebase/firebase.utils';
 //import { useEffect } from 'react';
 //import auth 
 import SignUp from '../../sign-up-form/sign-up-form.component';
