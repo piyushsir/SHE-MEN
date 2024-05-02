@@ -24,6 +24,25 @@
   .navigation .nav-links-container  .nav-link {
       padding: 20px 15px;
       cursor: pointer;
-      font-size: x-large;
+      font-weight: 500;
+      color: #626262;
+    font-size: 34px;
+    font-weight: 400;
+    }
+    .navigation .nav-links-container  .nav-link:hover{
+      transform: scale(1.05);
+      transition: 0.6s;
+    }
+    .b1{
+      width: 157px;
+      height: 58px;
+      outline: none;
+      border: 1px solid #7a7a7a;
+      border-radius: 75px;
+      color: #515151;
+      font-size: 30px;
+      font-weight: 500;
+      background: white;
+      cursor: pointer;
     }
     

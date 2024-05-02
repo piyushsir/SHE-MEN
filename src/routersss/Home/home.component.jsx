@@ -1,9 +1,16 @@
 
-import CategoriesConatiner from "../../components/categories-container/categories.container.component";
+//import CategoriesConatiner from "../../components/categories-container/categories.container.component";
+import React from 'react'
+import Hero from '../../components/hero/hero'
+import Popular from '../../components/popular/popular'
+import Offer from '../../components/offer/offer'
+import NewCollection from '../../components/newcollection/newcollection'
+import Newsletter from '../../components/newsletter/newsletter'
+import Footer from '../../components/footer/footer'
 const Homepage=()=>
  {
 
-
+ 
   const category=[
     {
       title:"HATS",
@@ -34,7 +41,12 @@ const Homepage=()=>
   return (
    <div>
 
-<CategoriesConatiner categ={category} />
+        <Hero/>
+        <Popular/>
+        <Offer/>
+        <NewCollection/>
+        <Newsletter/>
+        <Footer/>
 
    </div>
      
