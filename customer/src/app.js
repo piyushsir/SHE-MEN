@@ -1,7 +1,6 @@
 import express from 'express';
 import customerRoutes from './routes/customer.js';
 import mongoose from 'mongoose';
-import config from "../config.js";
 import bodyParser from 'body-parser';
 
 const connectToDB = async () => {
