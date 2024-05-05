@@ -15,10 +15,7 @@ spec:
       containers:
       - name: frontend
         image: piyush1048/frontend:0.0.1.RELEASE
-      - name: payment
-        image: piyush1048/payment.0.0.2.RELEASE
-        
-
+      
 ---
 
 apiVersion: v1
