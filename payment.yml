@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-deploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: payment
+  template:
+    metadata:
+      labels:
+        app: payment
+    spec:
+      containers:
+      
+      - name: payment
+        image: piyush1048/payment.0.0.2.RELEASE
+        
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment-service
+spec:
+  selector:
+    name: payment
+  ports:
+    - name: http
+      port: 7000
+      targetPort: 3003
