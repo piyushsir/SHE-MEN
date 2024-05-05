@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: customer
-        image: piyush1048/frontend:0.0.1.RELEASE
+        image: piyush1048/customer:0.0.1.RELEASE
       
         
 

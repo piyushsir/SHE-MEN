@@ -15,7 +15,7 @@ spec:
       containers:
       
       - name: payment
-        image: piyush1048/payment.0.0.2.RELEASE
+        image: piyush1048/payment.0.0.1.RELEASE
         
 
 ---
@@ -30,4 +30,4 @@ spec:
   ports:
     - name: http
       port: 7000
-      targetPort: 3003
+      targetPort: 7000

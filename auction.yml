@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: auction
-        image: piyush1048/frontend:0.0.1.RELEASE
+        image: piyush1048/auction:0.0.1.RELEASE
       
         
 
