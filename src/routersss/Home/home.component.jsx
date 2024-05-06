@@ -7,6 +7,8 @@ import Offer from '../../components/offer/offer'
 import NewCollection from '../../components/newcollection/newcollection'
 import Newsletter from '../../components/newsletter/newsletter'
 import Footer from '../../components/footer/footer'
+import Newsletter2 from '../../components/newsletter2/newsletter'
+import Popular2 from '../../components/new/popular'
 const Homepage=()=>
  {
 
@@ -46,6 +48,8 @@ const Homepage=()=>
         <Offer/>
         <NewCollection/>
         <Newsletter/>
+        <Popular2/>
+        <Newsletter2/>
         <Footer/>
 
    </div>
