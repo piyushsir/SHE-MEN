@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-deploy
+  labels:
+    app: frontend
 spec:
   replicas: 2
   selector:
@@ -15,6 +17,8 @@ spec:
       containers:
       - name: frontend
         image: piyush1048/frontend:0.0.1.RELEASE
+        ports:
+        - containerPort: 3000
       
 ---
 
@@ -23,10 +27,12 @@ kind: Service
 metadata:
   name: frontend-service
 spec:
+  type: NodePort
   selector:
-    name: frontend
+    app: frontend
   ports:
     - name: http
       port: 8000
       targetPort: 3000
-  type: LoadBalancer
+      nodePort: 31000
+ 
