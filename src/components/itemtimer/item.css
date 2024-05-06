@@ -34,7 +34,7 @@
 .inbid{
     margin-top: 280px;
     border-radius: 45;
-    height: 55px;
+    height: 61px;
     padding: 5px;
     font-size: 20px;
     text-align: center;
@@ -54,10 +54,20 @@
 .placebid{
     margin-top: 280px;
     border-radius: 45;
-    height: 55px;
+    height: 67px;
     padding: 5px;
     font-size: 20px;
     text-align: center;
     width:80px;
     background-color: rgb(8, 173, 25);
+}
+
+.winner{
+    width: 350px;
+    height:50px;
+    background-color: black;
+    text-align: center;
+    color: azure;
+    margin-top: 10px;
+    font-size: 40px;
 }

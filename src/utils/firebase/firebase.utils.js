@@ -1,4 +1,5 @@
 import {initializeApp} from 'firebase/app'
+import { getStorage } from "firebase/storage"
 import {getFirestore,getDoc,setDoc,doc,collection,writeBatch,query, getDocs} from 'firebase/firestore'
 import {getAuth,signInWithPopup,signInWithRedirect,GoogleAuthProvider,
     createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut
@@ -12,7 +13,7 @@ const firebaseConfig = {
     appId: "1:975008070070:web:3505fc8d33c105a2b3e917"
   };
   
-  initializeApp(firebaseConfig);
+  const app=initializeApp(firebaseConfig);
 
   const provider = new GoogleAuthProvider();
   provider.setCustomParameters({
@@ -101,3 +102,8 @@ export const SignOutUser =async()=>
 {
     return await signOut(auth); 
 }
+
+const imgDB = getStorage(app)
+const txtDB = getFirestore(app)
+
+export {imgDB,txtDB};
