@@ -1,0 +1,94 @@
+.item{
+    width: 350px;
+}
+.item p{
+    margin: 6px 0px;
+}
+.item-prices{
+    display: flex;
+    gap: 20px;
+
+
+}
+
+.item-price-new{
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
+}
+.item-price-old{
+    color: #8c8c8c;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+.item:hover{
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+
+.image{
+    height: 350px;
+}
+
+.inbid{
+    margin-top: 280px;
+    border-radius: 45;
+    height: 60px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.timer{
+    width: 350px;
+    height:50px;
+    display: flex;
+    background-color: black;
+    text-align:justify;
+    justify-content: center;
+    color: azure;
+    margin-top: 50px;
+    font-size: 30px;
+    border-radius: 4px;
+
+}
+
+.placebid{
+    margin-top: 280px;
+    border-radius: 45;
+    height: 60px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    width:80px;
+    background-color: rgb(8, 173, 25);
+    border-radius: 4px;
+}
+
+.winner{
+    width: 350px;
+    height:50px;
+    background-color: black;
+    text-align: center;
+    color: azure;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.del{
+     height:50px;
+     width: 50px;
+     background-color: red;
+     margin-bottom: 0;
+     margin-top: 50px;
+     font-size: 30px;
+     border-radius: 4px;
+     
+}
+
+.sp{
+    display: flex;
+    flex-direction: row;
+}

@@ -1,12 +1,11 @@
 import React from 'react'
 import './popular.css'
-import data_product from '../Assets/data'
-import Item from '../itemtimer/item'
+import Item2 from '../itemtimer2/item';
 
 import { useEffect, useState } from "react";
 import { txtDB } from "../../utils/firebase/firebase.utils"
 import { collection, getDocs } from "firebase/firestore";
-const Popular2 = () => {
+const Popular3 = () => {
 
   const [data,setData] = useState([])
 
@@ -24,12 +23,10 @@ useEffect(()=>{
 
   return (
     <div className='popular'>
-        <h1>AUCTION</h1>
-        <hr></hr>
         <div className='popular-item'>
             {
-                data_product.map((item,i)=>{
-                    return <Item key={i} name={item.name} image={item.image}/>
+                data.map((item,i)=>{
+                    return <Item2 key={i} id={item.id} name={item.txtVal} image={item.imgUrl}/>
                 })
             }
         </div>
@@ -37,4 +34,4 @@ useEffect(()=>{
   )
 }
 
-export default Popular2
+export default Popular3

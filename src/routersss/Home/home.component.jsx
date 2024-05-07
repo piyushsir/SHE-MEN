@@ -9,6 +9,7 @@ import Newsletter from '../../components/newsletter/newsletter'
 import Footer from '../../components/footer/footer'
 import Newsletter2 from '../../components/newsletter2/newsletter'
 import Popular2 from '../../components/new/popular'
+import Popular3 from '../../components/new2/popular'
 const Homepage=()=>
  {
 
@@ -49,6 +50,7 @@ const Homepage=()=>
         <NewCollection/>
         <Newsletter/>
         <Popular2/>
+        <Popular3/>
         <Newsletter2/>
         <Footer/>
 
