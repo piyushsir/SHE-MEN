@@ -18,7 +18,7 @@ const CheckList=()=>
       const headers = {
           "Content-Type":"application/json"
       }
-      const response = await fetch("http://localhost:7000/api/create-checkout-session",{
+      const response = await fetch("http://127.0.0.1:54598",{
           method:"POST",
           headers:headers,
           body:JSON.stringify(body)
